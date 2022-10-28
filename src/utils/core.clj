@@ -9,10 +9,11 @@
    [clojure.data.json :as json]
    [org.httpkit.client :as http]))
 
-(def manager-map {:guanlan ["ms2008" "StarlightIbuki" "fffonion"
-                            "sumimakito" "outsinre" "windmgc"
-                            "vm-001" "catbro666" "mayocream"
-                            "ADD-SP" "liverpool8056" "raoxiaoyan"]
+(def manager-map {:guanlan ["StarlightIbuki" "fffonion" "sumimakito"
+                            "mayocream" "ADD-SP" "raoxiaoyan"
+                            "Leopoldthecoder"]
+                  :victor ["ms2008" "outsinre" "windmgc"
+                           "vm-001" "catbro666" "liverpool8056"]
                   :rob ["Guaris" "hutchic" "davidma415"
                         "KongSteve"]
                   :tyler ["locao" "tyler-ball" "gszr" "liyangau"
@@ -93,7 +94,7 @@
 ;; from REPL
 ;; (def gh-tok (load-token-from-disk "/Users/srp/.token"))
 ;; (def prs (fetch-all-open-prs "Kong/kong-ee" gh-tok))
-;; (map #(get (get % "user") "login") prs) -- for authors
+;; (def authors (map #(get-in % ["user" "login"]) prs)) -- for authors
 ;; 
 
 
